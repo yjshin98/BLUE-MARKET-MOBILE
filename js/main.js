@@ -99,18 +99,16 @@ cancleBtn.addEventListener("click",function(){
     }
     const searchLiA = document.createElement("li");
     const btnX = document.createElement("span");
+    const hiddentext = document.querySelector(".hiddentext");
+    
     searchLiA.append(text.value);  
     btnX.classList.add("searchX");
     searchLiA.prepend(btnX);
     report.prepend(searchLiA);
     report.style.display = "block";       
+        
 
-    text.value="";
-    text.focus();    
-
-    const btnX2 = document.querySelectorAll(".searchX")
-
-    
+    const btnX2 = document.querySelectorAll(".searchX");    
 
     for(let i=0; i<btnX2.length; i++){      
         const del2 = document.querySelectorAll(".report li");
@@ -118,11 +116,14 @@ cancleBtn.addEventListener("click",function(){
           if(i === j) {
             btnX2[i].addEventListener("click",function(){ 
             del2[i].remove();
-            })
-            return;
+            })            
           }           
         }                 
     }
+    
+    text.value="";    
+    hiddentext.focus();
+    text.focus();
     
 })
 

@@ -583,7 +583,7 @@ b{
   background:url("../img/search.svg") center center / 100% 100%;
 }
 
-.search_wrap input{
+.realtext{
   width:70%;
   height:50px;
   border:none;
@@ -661,4 +661,12 @@ b{
   right:0;
   bottom:0;    
   z-index:70;
+}
+
+.hiddentext{
+  width:0; 
+  height:0;
+  cursor:default;
+  outline: none;
+  border:none;
 }
